@@ -1,10 +1,8 @@
-package ts.model;
+package model;
 
 import java.io.Serializable;
 import java.util.Date;
-
-import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
+import model.*;
 
 public class ExpressSheet implements Serializable {
 
@@ -15,33 +13,42 @@ public class ExpressSheet implements Serializable {
 
 	public ExpressSheet() {
 	}
-	//唯一标识码
+	
 	private String ID;
 	
-	//发件人姓名，电话号码，省市区Code，详细地址
+	private int type;
+	
 	private String sendername;
 	
 	private String sendertel;
-
+	
 	private String senderregcode;
 	
 	private String senderaddr;
+	
+	private String receivername;
+	
+	private String receivertel;
+	
+	private String receiverregcode;
+	
+	private String receiveraddr;
+	
+	private java.util.Set<ExpressHistory> history = new java.util.HashSet<ExpressHistory>();
+	
+	public java.util.Set<ExpressHistory> getHistory() {
+		return history;
+	}
 
-	//收件人姓名，电话号码，省市区Code，详细地址
-	private String recievername;
+	public void setHistory(java.util.Set<ExpressHistory> history) {
+		this.history = history;
+	}
 
-	private String recievertel;
-	
-	private String recieverregcode;
-	
-	private String recieveraddr;
-	
-	//以下属性可以暂时忽略
 	private Float weight;
 
-	private int tranway;
+	private int transway;
 	
-	private Float tranFee;
+	private Float transFee;
 	
 	private Date createTime;
 	
@@ -49,9 +56,25 @@ public class ExpressSheet implements Serializable {
 	
 	private int status;
 	
+	private TransNode nextnode;
+	
+	public TransNode getNextnode() {
+		return nextnode;
+	}
+
+	public void setNextnode(TransNode nextnode) {
+		this.nextnode = nextnode;
+	}
+
+
 	private String Note;
 	
-	private int type;
+	
+	
+//	@OneToMany(mappedBy="express", targetEntity=TransPackageContent.class)	
+//	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+//	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+//	private java.util.Set<TransPackageContent> transPackageContent = new java.util.HashSet<TransPackageContent>();
 	
 	public void setID(String value) {
 		this.ID = value;
@@ -90,8 +113,8 @@ public class ExpressSheet implements Serializable {
 		return weight;
 	}
 	
-	public void setTranFee(Float value) {
-		this.tranFee = value;
+	public void setTransFee(Float value) {
+		this.transFee = value;
 	}
 	
 	public String getSendername() {
@@ -127,44 +150,44 @@ public class ExpressSheet implements Serializable {
 	}
 
 	
-	public String getRecievername() {
-		return recievername;
+	public String getReceivername() {
+		return receivername;
 	}
 
-	public void setRecievername(String recievername) {
-		this.recievername = recievername;
+	public void setReceivername(String receivername) {
+		this.receivername = receivername;
 	}
 
-	public String getRecievertel() {
-		return recievertel;
+	public String getReceivertel() {
+		return receivertel;
 	}
 
-	public void setRecievertel(String recievertel) {
-		this.recievertel = recievertel;
+	public void setReceivertel(String receivertel) {
+		this.receivertel = receivertel;
 	}
 
-	public String getRecieverregcode() {
-		return recieverregcode;
+	public String getReceiverregcode() {
+		return receiverregcode;
 	}
 
-	public void setRecieverregcode(String recieverregcode) {
-		this.recieverregcode = recieverregcode;
+	public void setReceiverregcode(String receiverregcode) {
+		this.receiverregcode = receiverregcode;
 	}
 
-	public String getRecieveraddr() {
-		return recieveraddr;
+	public String getReceiveraddr() {
+		return receiveraddr;
 	}
 
-	public void setRecieveraddr(String recieveraddr) {
-		this.recieveraddr = recieveraddr;
+	public void setReceiveraddr(String receiveraddr) {
+		this.receiveraddr = receiveraddr;
 	}
 
-	public int getTranway() {
-		return tranway;
+	public int getTransway() {
+		return transway;
 	}
 
-	public void setTranway(int tranway) {
-		this.tranway = tranway;
+	public void setTransway(int transway) {
+		this.transway = transway;
 	}
 
 	public Date getCreateTime() {
@@ -198,17 +221,8 @@ public class ExpressSheet implements Serializable {
 	public void setNote(String note) {
 		Note = note;
 	}
-
-	public java.util.Set<ExpressHistory> getHistory() {
-		return history;
-	}
-
-	public void setHistory(java.util.Set<ExpressHistory> history) {
-		this.history = history;
-	}
-
-	public Float getTranFee() {
-		return tranFee;
+	public Float getTransFee() {
+		return transFee;
 	}
 	
 	
@@ -231,16 +245,15 @@ public class ExpressSheet implements Serializable {
 		}
 		else {
 		return "ExpressSheet [ID=" + ID + ", type=" + type + ", sendername=" + sendername + ", sendertel=" + sendertel
-				+ ", senderregcode=" + senderregcode + ", senderaddr=" + senderaddr + ", recievername=" + recievername
-				+ ", recievertel=" + recievertel + ", recieverregcode=" + recieverregcode + ", recieveraddr="
-				+ recieveraddr + ", weight=" + weight + ", tranway=" + tranway + ", tranFee=" + tranFee
+				+ ", senderregcode=" + senderregcode + ", senderaddr=" + senderaddr + ", receivername=" + receivername
+				+ ", receivertel=" + receivertel + ", receiverregcode=" + receiverregcode + ", receiveraddr="
+				+ receiveraddr + ", weight=" + weight + ", transway=" + transway + ", transFee=" + transFee
 				+ ", createTime=" + createTime + ", finishTime=" + finishTime + ", status=" + status + ", Note=" + Note
-				+ ", history=" + history + ", _saved=" + _saved + "]";
+				+ ", _saved=" + _saved + "]";
 		}
 	}
 	
 	
-	@Transient	
 	private boolean _saved = false;
 	
 	public void onSave() {
@@ -256,9 +269,9 @@ public class ExpressSheet implements Serializable {
 	}
 	
 	public static final class STATUS{
-		public static final int CREATING = -1; //创建中
-		public static final int UNPACKED = 0; //未在包裹中
-		public static final int PACKED = 1;  //已在包裹中
-		public static final int DELIVERIED = 2; //已经送达
+		public static final int CREATING = -1; //����
+		public static final int UNPACKED = 0;
+		public static final int PACKED = 1; 
+		public static final int DELIVERIED = 2;
 	}
 }

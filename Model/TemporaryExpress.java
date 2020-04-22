@@ -1,4 +1,4 @@
-package ts.model;
+package model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,31 +12,27 @@ public class TemporaryExpress implements Serializable {
 
 	public TemporaryExpress() {
 	}
-	
 	private int SN;
 	
 	private int type;
 	
-	//发件人姓名，电话号码，省市区Code，详细地址
 	private String sendername;
 	
 	private String sendertel;
-
+	
 	private String senderregcode;
 	
 	private String senderaddr;
-
-	//收件人姓名，电话号码，省市区Code，详细地址
-	private String recievername;
-
-	private String recievertel;
 	
-	private String recieverregcode;
+	private String receivername;
 	
-	private String recieveraddr;
+	private String receivertel;
 	
-	//【选择建包裹到哪个节点处理】
-	private int sourceNode;
+	private String receiverregcode;
+	
+	private String receiveraddr;
+	
+	private String note;
 	
 //	@OneToMany(mappedBy="express", targetEntity=TransPackageContent.class)	
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -66,9 +62,13 @@ public class TemporaryExpress implements Serializable {
 	public void setSenderregcode(String senderregcode) {
 		this.senderregcode = senderregcode;
 	}
+	
+	public String getNote() {
+		return note;
+	}
 
-	public void setSourceNode(int sourceNode) {
-		this.sourceNode = sourceNode;
+	public void setNote(String note) {
+		this.note = note;
 	}
 
 	public void setSenderaddr(String senderaddr) {
@@ -99,36 +99,36 @@ public class TemporaryExpress implements Serializable {
 		this.sendertel = sendertel;
 	}
 
-	public String getRecievername() {
-		return recievername;
+	public String getReceivername() {
+		return receivername;
 	}
 
-	public void setRecievername(String recievername) {
-		this.recievername = recievername;
+	public void setReceivername(String receivername) {
+		this.receivername = receivername;
 	}
 
-	public String getRecievertel() {
-		return recievertel;
+	public String getReceivertel() {
+		return receivertel;
 	}
 
-	public void setRecievertel(String recievertel) {
-		this.recievertel = recievertel;
+	public void setReceivertel(String receivertel) {
+		this.receivertel = receivertel;
 	}
 
-	public String getRecieverregcode() {
-		return recieverregcode;
+	public String getReceiverregcode() {
+		return receiverregcode;
 	}
 
-	public void setRecieverregcode(String recieverregcode) {
-		this.recieverregcode = recieverregcode;
+	public void setReceiverregcode(String receiverregcode) {
+		this.receiverregcode = receiverregcode;
 	}
 
-	public String getRecieveraddr() {
-		return recieveraddr;
+	public String getReceiveraddr() {
+		return receiveraddr;
 	}
 
-	public void setRecieveraddr(String recieveraddr) {
-		this.recieveraddr = recieveraddr;
+	public void setReceiveraddr(String receiveraddr) {
+		this.receiveraddr = receiveraddr;
 	}
 
 	
@@ -150,9 +150,9 @@ public class TemporaryExpress implements Serializable {
 		}
 		else 	
 			return "ExpressSheet [SN=" + SN + ", type=" + type + ", sendername=" + sendername + ", sendertel=" + sendertel
-					+ ", senderregcode=" + senderregcode + ", senderaddr=" + senderaddr + ", recievername=" + recievername
-					+ ", recievertel=" + recievertel + ", recieverregcode=" + recieverregcode + ", recieveraddr="
-					+ recieveraddr + "]";
+					+ ", senderregcode=" + senderregcode + ", senderaddr=" + senderaddr + ", receivername=" + receivername
+					+ ", receivertel=" + receivertel + ", receiverregcode=" + receiverregcode + ", receiveraddr="
+					+ receiveraddr + "]";
 	}
 	
 }

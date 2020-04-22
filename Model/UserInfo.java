@@ -11,10 +11,9 @@
  * Licensee: 
  * License Type: Evaluation
  */
-package ts.model;
+package model;
 
 import java.io.Serializable;
-
 public class UserInfo implements Serializable {
 	/**
 	 * 
@@ -24,7 +23,6 @@ public class UserInfo implements Serializable {
 	public UserInfo() {
 	}
 	
-	//
 	private int UID;
 	
 	private String Uname;
@@ -39,6 +37,26 @@ public class UserInfo implements Serializable {
 	
 	private Integer status;
 	
+	private float x;
+	
+	private float y;
+	
+	public float getX() {
+		return x;
+	}
+	
+	public void setX(float x) {
+		this.x = x;
+	}
+	
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
 	public void setUID(int value) {
 		this.UID = value;
 	}
@@ -121,12 +139,17 @@ public class UserInfo implements Serializable {
 			return sb.toString();
 		}
 	}
-
+	
+	public static final class STATUS{
+		public static final int OFFLINE = 0;
+		public static final int ONLINE = 1;
+	}
+	
 	public static final class ROLE{
-		public static final int NODE_WORKER = 1; //网点工作人员
-		public static final int CENTER_WORKER = 2; //分拣中心工作人员
-		public static final int DRIVER = 3; //司机
-		public static final int COURIER = 4; //快递员
+		public static final int NODE_WORKER = 1; //���㹤����Ա
+		public static final int CENTER_WORKER = 2; //�ּ����Ĺ�����Ա
+		public static final int DRIVER = 3; //˾��
+		public static final int COURIER = 4; //���Ա
 	}
 	
 }

@@ -1,8 +1,22 @@
+/**
+ * "Visual Paradigm: DO NOT MODIFY THIS FILE!"
+ * 
+ * This is an automatic generated file. It will be regenerated every time 
+ * you generate persistence class.
+ * 
+ * Modifying its content may cause the program not work, or your work may lost.
+ */
 
-package ts.model;
+/**
+ * Licensee: 
+ * License Type: Evaluation
+ */
+package model;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import model.*;
 
 public class TransPackage implements Serializable {
 	/**
@@ -12,21 +26,20 @@ public class TransPackage implements Serializable {
 
 	public TransPackage() {
 	}
-
 	private String ID;
 	
-	//出发节点
-	private int sourceNode;
+	private TransNode sourcenode;
 	
-	//目标节点	
-	private int targetNode;
+	private TransNode targetnode;
 	
-	//创建时间
 	private Date createTime;
 	
-	//状态
-	private int status;
+	private Integer status;
 	
+	
+	private java.util.Set<TransPackageContent> content = new java.util.HashSet<TransPackageContent>();
+	
+	private java.util.Set<TransHistory> history = new java.util.HashSet<TransHistory>();
 	
 	public void setID(String value) {
 		this.ID = value;
@@ -40,20 +53,21 @@ public class TransPackage implements Serializable {
 		return getID();
 	}
 	
-	public int getSourceNode() {
-		return sourceNode;
+
+	public TransNode getSourcenode() {
+		return sourcenode;
 	}
 
-	public void setSourceNode(int sourceNode) {
-		this.sourceNode = sourceNode;
+	public void setSourcenode(TransNode sourcenode) {
+		this.sourcenode = sourcenode;
 	}
 
-	public int getTargetNode() {
-		return targetNode;
+	public TransNode getTargetnode() {
+		return targetnode;
 	}
 
-	public void setTargetNode(int targetNode) {
-		this.targetNode = targetNode;
+	public void setTargetnode(TransNode targetnode) {
+		this.targetnode = targetnode;
 	}
 
 	public void setCreateTime(Date value) {
@@ -72,6 +86,24 @@ public class TransPackage implements Serializable {
 		return status;
 	}
 	
+	
+	
+	public void setContent(java.util.Set<TransPackageContent> value) {
+		this.content = value;
+	}
+	public java.util.Set<TransPackageContent> getContent() {
+		return content;
+	}
+	
+	
+	public void setHistory(java.util.Set<TransHistory> value) {
+		this.history = value;
+	}
+	public java.util.Set<TransHistory> getHistory() {
+		return history;
+	}
+	
+	
 	public String toString() {
 		return toString(false);
 	}
@@ -84,18 +116,36 @@ public class TransPackage implements Serializable {
 			StringBuffer sb = new StringBuffer();
 			sb.append("TransPackage[ ");
 			sb.append("ID=").append(getID()).append(" ");
-			sb.append("SourceNode=").append(getSourceNode()).append(" ");
-			sb.append("TargetNode=").append(getTargetNode()).append(" ");
+			sb.append("SourceNode=").append(getSourcenode().getNodeName()).append(" ");
+			sb.append("TargetNode=").append(getTargetnode().getNodeName()).append(" ");
 			sb.append("CreateTime=").append(getCreateTime()).append(" ");
 			sb.append("Status=").append(getStatus()).append(" ");
+			sb.append("Content.size=").append(getContent().size()).append(" ");
+			sb.append("History.size=").append(getHistory().size()).append(" ");
 			sb.append("]");
 			return sb.toString();
 		}
 	}
 	
+	private boolean _saved = false;
+	
+	public void onSave() {
+		_saved=true;
+	}
+	
+	
+	public void onLoad() {
+		_saved=true;
+	}
+	
+	
+	public boolean isSaved() {
+		return _saved;
+	}
+	
 	public static final class STATUS{
-		public static final int IN_NODE = 0;  //在节点中
-		public static final int ON_RODE = 1;  //在运输途中
-		public static final int DELIVERIED = 2; //已送达（已失效）
+		public static final int IN_NODE = 0;
+		public static final int ON_RODE = 1;
+		public static final int DELIVERIED = 2;
 	}
 }

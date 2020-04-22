@@ -1,4 +1,4 @@
-package ts.model;
+package model;
 
 import java.util.List;
 

@@ -11,10 +11,9 @@
  * Licensee: 
  * License Type: Evaluation
  */
-package ts.model;
+package model;
 
 import java.io.Serializable;
-
 public class TransNode implements Serializable {
 	/**
 	 * 
@@ -23,14 +22,14 @@ public class TransNode implements Serializable {
 
 	public TransNode() {
 	}
-	private int ID;
-		
+	private String ID;
+	
 	private String nodeName;
 	
 	private Integer nodeType;
 	
 	private String regionCode;
-		
+	
 	private String telCode;
 	
 	private int status;
@@ -48,11 +47,11 @@ public class TransNode implements Serializable {
 		this.status = status;
 	}
 
-	public int getID() {
+	public String getID() {
 		return ID;
 	}
 
-	public void setID(int iD) {
+	public void setID(String iD) {
 		ID = iD;
 	}
 
@@ -64,7 +63,7 @@ public class TransNode implements Serializable {
 		this._saved = _saved;
 	}
 
-	public int getORMID() {
+	public String getORMID() {
 		return getID();
 	}
 	
@@ -139,9 +138,31 @@ public class TransNode implements Serializable {
 		}
 	}
 	
+	private boolean _saved = false;
+	
+	public void onSave() {
+		_saved=true;
+	}
+	
+	
+	public void onLoad() {
+		_saved=true;
+	}
+	
+	
+	public boolean isSaved() {
+		return _saved;
+	}
+	
+	public static final class STATUS{
+		public static final int OFFLINE = 0;
+		public static final int ONLINE = 1;
+	}
+	
 	public static final class TYPE {
-		public static final int NODE = 1;     //该节点为网点
-		public static final int CENTER = 2;   //该节点为分拣中心
+		public static final int NODE = 1;
+		public static final int CITY_CENTER = 2;
+		public static final int PROVINCE_CENTER = 3;
 	}
 	
 }
