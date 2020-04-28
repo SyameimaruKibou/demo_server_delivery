@@ -27,3 +27,9 @@
 【更新（20/4/28）】  
 更新内容  
 1.修改了服务接口（主要修改了大部分响应头格式（class_name））  
+
+【更新（20/4/28 22:00）】  
+更新内容  
+1.新增“根据快件id获得该快件路径树上所有节点”的接口
+2.更改揽收逻辑bug，现在当待创建快件的路径树上没有对应节点时，不允许创建该快件
+3.修改model/ExpressSheet.java源码，增加senderregname和receiverregname两个字段，表示发/收件人Region区域全名（但只有调用getExpressSheet和getExpressList两种方法获得Express对象时该字段才有值）

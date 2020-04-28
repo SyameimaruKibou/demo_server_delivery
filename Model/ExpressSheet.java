@@ -254,6 +254,31 @@ public class ExpressSheet implements Serializable {
 	}
 	
 	
+	private String senderregname;
+	
+	
+	private String receiverregname;
+	
+	
+	
+	public String getSenderregname() {
+		return senderregname;
+	}
+
+	public void setSenderregname(String senderregname) {
+		this.senderregname = senderregname;
+	}
+
+	public String getReceiverregname() {
+		return receiverregname;
+	}
+
+	public void setReceiverregname(String receiverregname) {
+		this.receiverregname = receiverregname;
+	}
+
+
+	
 	private boolean _saved = false;
 	
 	public void onSave() {
