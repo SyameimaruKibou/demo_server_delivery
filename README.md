@@ -32,4 +32,14 @@
 更新内容  
 1.新增“根据快件id获得该快件路径树上所有节点”的接口  
 2.更改揽收逻辑bug，现在当待创建快件的路径树上没有对应节点时，不允许创建该快件  
-3.修改model/ExpressSheet.java源码，增加senderregname和receiverregname两个字段，表示发/收件人Region区域全名（但只有调用getExpressSheet和getExpressList两种方法获得Express对象时该字段才有值）  
+3.修改model/ExpressSheet.java源码，增加senderregname和receiverregname两个字段，表示发/收件人Region区域全名（但只有调用getExpressSheet和getExpressList两种方法获得Express对象时该字段才有值）
+
+【更新（20/5/19）】 
+更新内容
+1.增设https协议  
+旧地址：http://47.93.246.164:8080/  
+新地址：https://kuaidi.cy1999.cn/  
+注意新地址没有8080  
+2.ExpressSheet增设currentnode字段，和nextnode相对应，记录快件的现在所处节点，主要是用于拦截客户端调用接口时传上去非法节点的情况，最好更新一下model，当然不更新影响应该也不大。
+3.修复了快件路径的重大bug，解释了为什么之前快件路径始终不对劲的现象，虽然已经更新到服务器但是还没来得及测试，可能有路径仍然不对和引入其他bug的风险。  
+4.修复一些小bug  

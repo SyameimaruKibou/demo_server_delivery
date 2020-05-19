@@ -58,6 +58,16 @@ public class ExpressSheet implements Serializable {
 	
 	private TransNode nextnode;
 	
+	public TransNode getCurrentnode() {
+		return currentnode;
+	}
+
+	public void setCurrentnode(TransNode currentnode) {
+		this.currentnode = currentnode;
+	}
+
+	private TransNode currentnode;
+	
 	public TransNode getNextnode() {
 		return nextnode;
 	}
@@ -253,31 +263,6 @@ public class ExpressSheet implements Serializable {
 		}
 	}
 	
-	
-	private String senderregname;
-	
-	
-	private String receiverregname;
-	
-	
-	
-	public String getSenderregname() {
-		return senderregname;
-	}
-
-	public void setSenderregname(String senderregname) {
-		this.senderregname = senderregname;
-	}
-
-	public String getReceiverregname() {
-		return receiverregname;
-	}
-
-	public void setReceiverregname(String receiverregname) {
-		this.receiverregname = receiverregname;
-	}
-
-
 	
 	private boolean _saved = false;
 	
