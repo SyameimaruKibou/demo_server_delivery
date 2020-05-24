@@ -14,6 +14,7 @@
 package model;
 
 import java.io.Serializable;
+import model.*;
 public class UserInfo implements Serializable {
 	/**
 	 * 
@@ -41,6 +42,8 @@ public class UserInfo implements Serializable {
 	
 	private float y;
 	
+	private TransNode workNode;
+
 	public float getX() {
 		return x;
 	}
@@ -116,7 +119,15 @@ public class UserInfo implements Serializable {
 	public Integer getStatus() {
 		return status;
 	}
-	
+
+	public TransNode getWorkNode() {
+		return workNode;
+	}
+
+	public void setWorkNode(TransNode workNode) {
+		this.workNode = workNode;
+	}
+
 	public String toString() {
 		return toString(false);
 	}
@@ -146,10 +157,10 @@ public class UserInfo implements Serializable {
 	}
 	
 	public static final class ROLE{
-		public static final int NODE_WORKER = 1; //���㹤����Ա
-		public static final int CENTER_WORKER = 2; //�ּ����Ĺ�����Ա
-		public static final int DRIVER = 3; //˾��
-		public static final int COURIER = 4; //���Ա
+		public static final int NODE_WORKER = 1; //网点员工
+		public static final int CENTER_WORKER = 2; //分拣中心员工
+		public static final int DRIVER = 3; //司机
+		public static final int COURIER = 4; //快递员
 	}
 	
 }
