@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:orientation="horizontal">
+
+				<CheckBox
+					android:id="@+id/chenckbox"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:visibility="gone"
+					/>
+
+				<TextView
+					android:layout_width="1dp"
+					android:background="@color/colorBackground"
+					android:layout_height="match_parent"/>
+
+			   <RelativeLayout
+				  android:padding="5dip"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				   android:background="@color/white"
+				  >
+
+					  <LinearLayout
+						  android:id="@+id/l2"
+						  android:layout_alignParentRight="true"
+						  android:orientation="vertical"
+						  android:layout_width="wrap_content"
+						  android:layout_height="wrap_content"
+						  tools:ignore="RtlHardcoded,UnknownId">
+
+						  <TextView
+							  android:id="@+id/time"
+							  android:layout_width="wrap_content"
+							  android:layout_height="fill_parent"
+							  android:padding="2dip"
+							  android:layout_weight="1"
+							  android:layout_marginLeft="6dp"
+							  android:textSize="10dip"
+							  android:gravity="center"
+							  android:singleLine="true"
+							  android:text="xx年xx月xx日"
+							  android:textColor="@color/gray"
+							  tools:ignore="RtlHardcoded,SpUsage" />
+
+						  <TextView
+							  android:id="@+id/st"
+							  android:layout_width="wrap_content"
+							  android:layout_height="fill_parent"
+							  android:layout_weight="1"
+							  android:layout_marginLeft="6dp"
+							  android:padding="2dip"
+							  android:textSize="13dip"
+							  android:text="状态"
+							  android:singleLine="true"
+							  android:gravity="center"
+							  android:textColor="@color/gray"
+							  />
+					  </LinearLayout>
+
+					  <LinearLayout
+						  android:id="@+id/l1"
+						  android:layout_width="match_parent"
+						  android:layout_height="wrap_content"
+						  android:layout_toLeftOf="@id/l2"
+						  android:orientation="vertical"
+						  android:paddingLeft="4dip" >
+
+						  <TextView
+							  android:id="@+id/id"
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:layout_alignParentLeft="true"
+							  android:layout_weight="1"
+							  android:gravity="center"
+							  android:singleLine="true"
+							  android:text="快递ID"
+							  android:textColor="@color/black"
+							  android:textSize="13dip"
+							  tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded,SpUsage" />
+
+
+
+						  <RelativeLayout
+							  android:padding="2dip"
+							  android:layout_width="wrap_content"
+							  android:layout_height="fill_parent"
+							  >
+
+							  <TextView
+								  android:id="@+id/name"
+								  android:layout_width="wrap_content"
+								  android:layout_height="wrap_content"
+								  android:layout_alignParentLeft="true"
+								  android:layout_weight="1"
+								  android:gravity="center"
+								  android:singleLine="true"
+								  android:text="姓名:"
+								  android:textColor="@color/black"
+								  android:textSize="14dip"
+								  tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded,SpUsage" />
+
+							  <TextView
+								  android:id="@+id/tel"
+								  android:layout_width="wrap_content"
+								  android:layout_height="wrap_content"
+								  android:layout_marginStart="5dp"
+								  android:layout_toEndOf="@+id/name"
+								  android:layout_weight="1"
+								  android:gravity="center"
+								  android:singleLine="true"
+								  android:text="电话"
+								  android:textColor="@color/black"
+								  android:textSize="14dip"
+								  tools:ignore="HardcodedText,ObsoleteLayoutParam,SpUsage" />
+
+						  </RelativeLayout>
+
+						  <TextView
+							  android:id="@+id/addr"
+							  android:layout_width="wrap_content"
+							  android:layout_height="fill_parent"
+							  android:textSize="13dip"
+							  android:layout_weight="1"
+							  android:text="地址"
+							  android:singleLine="true"
+							  android:layout_alignParentRight="true"
+							  android:gravity="center"
+							  android:textColor="@color/gray"
+							  />
+					  </LinearLayout>
+				  </RelativeLayout>
+
+
+			</LinearLayout>
+		      
+</LinearLayout>

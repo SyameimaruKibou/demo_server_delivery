@@ -1,0 +1,97 @@
+<resources>
+
+    <style name="Bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bar_height</item>
+        <item name="android:paddingRight">@dimen/horizontal_padding</item>
+        <item name="android:paddingLeft">@dimen/horizontal_padding</item>
+    </style>
+
+    <style name="Bar.White">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Bar.White.Selectable">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Icon">
+        <item name="android:layout_width">@dimen/icon_Size</item>
+        <item name="android:layout_height">@dimen/icon_Size</item>
+    </style>
+
+    <!-- 以上新建 -->
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyAppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">#54BA42</item>
+        <item name="android:backgroundStacked">#54BA42</item>
+
+    </style>
+
+
+
+    <!-- 自定义actionBar  未知错误-->
+
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#f4842d</item>
+        <item name="android:backgroundStacked">#d27026</item>
+    </style>
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="MyActionBarTabText"
+        parent="@android:style/Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="select_style_send_btn">
+        <item name="android:layout_width">60dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dip</item>
+        <item name="android:layout_marginRight">4dip</item>
+        <item name="android:paddingTop">4dip</item>
+        <item name="android:paddingBottom">4dip</item>
+        <!--item name="android:background"></item-->
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorFont</item>
+    </style>
+
+    <style name="RadioButtonBottomTab">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/txtcolor_gray2oran_sel</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/viewfinder_laser</item>
+    </style>
+</resources>

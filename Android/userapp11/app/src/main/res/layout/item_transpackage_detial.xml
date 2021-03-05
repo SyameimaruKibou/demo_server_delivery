@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/message">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="6dp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/viewfinder_laser"
+                android:id="@+id/ser"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id"
+                android:textSize="15sp"
+                android:text="  ID: "
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:id="@+id/tv_id"
+                android:text="12345678910123456789101234567891"
+                android:layout_toRightOf="@+id/id"
+                tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_message"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/message"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sender"
+                    android:text=" 收件人："/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/sender"
+                    android:id="@+id/tv_sender"
+                    android:text="薛茜茜"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reciver"
+                    android:text="电话："/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/reciver"
+                    android:text="12345678910"
+                    android:id="@+id/tv_reciver"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rcv_place_message">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  下一站："
+                android:id="@+id/target"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_target"
+                android:text="Zheng Zhou City"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/target"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="60sp"
+        android:layout_height="25dp"
+        android:text="未分拣"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        android:id="@+id/tv_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/message"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/message"/>
+
+</RelativeLayout>

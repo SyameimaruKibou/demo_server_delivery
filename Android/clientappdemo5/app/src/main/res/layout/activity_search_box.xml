@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="extrace.ui.domain.SearchBoxActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/viewfinder_laser">
+
+        <ImageView
+            android:id="@+id/goback"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="运单详情"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运单号："/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/box_numer"/>
+
+            </LinearLayout>
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/check_map_view"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="300dp"
+                android:clickable="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_location">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_location"
+                    android:layout_toLeftOf="@+id/user_address__go"
+                    android:text="点击查看实时位置"/>
+
+                <ImageView
+                    android:id="@+id/user_address__go"
+                    style="@style/Icon"
+                    android:src="@drawable/next"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:clickable="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <!--上部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="个人中心"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+    <!--顶部区域结束-->
+
+    <!-- 垂直滚动区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLine">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:textColor="@color/white" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/corners_bg"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!--头像显示-->
+                        <ImageView
+                            android:id="@+id/user_iv_head"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/user_tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="用户名"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorLine" />
+
+                <RelativeLayout
+                    android:layout_height="60dp"
+                    android:id="@+id/user_address"
+                    style="@style/Bar.White.Selectable">
+
+                    <ImageView
+                        android:id="@+id/address_image"
+                        style="@style/Icon"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/address_image"
+                        android:paddingLeft="5dp"
+                        android:text="我的地址簿" />
+
+                    <ImageView
+                        android:id="@+id/user_address__go"
+                        style="@style/Icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/next" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorLine" />
+
+                <RelativeLayout
+                    android:layout_height="60dp"
+                    android:id="@+id/user_information"
+                    style="@style/Bar.White.Selectable">
+
+                    <ImageView
+                        android:id="@+id/user_information_firsticon"
+                        style="@style/Icon"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/user_information_firsticon"
+                        android:paddingLeft="5dp"
+                        android:text="联系我们" />
+
+                    <ImageView
+                        android:id="@+id/user_information__go"
+                        style="@style/Icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/next" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

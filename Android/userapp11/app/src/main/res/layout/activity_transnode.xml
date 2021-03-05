@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewfinder_laser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:gravity="left"
+            android:text="卓越快递"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择节点"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/tracsnode_choose_tv"
+            android:textSize="16sp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/transnode_listview"/>
+
+
+
+</LinearLayout>

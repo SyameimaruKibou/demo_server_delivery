@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:id="@+id/arrow_left"
+            android:layout_width="40dp"
+            android:layout_height="37dp"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建包裹"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_package_ok"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="确认打包"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_btn"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_below="@+id/tv_to">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="包含快件："
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:id="@+id/include"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫码添加快件"
+            android:layout_toStartOf="@+id/scan"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pscan"
+            android:layout_alignParentRight="true"
+            android:id="@+id/scan"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/package_content_list"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty"
+        android:text="包裹内还没有快递噢~"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+</LinearLayout>

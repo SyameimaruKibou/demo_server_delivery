@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="extrace.ui.main">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 读取外置存储。如果开发者使用了so动态加载功能并且把so文件放在了外置存储区域，则需要申请该权限，否则不需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 写外置存储。如果开发者使用了离线地图，并且数据写在外置存储区域，则需要申请该权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 读取外置存储。如果开发者使用了so动态加载功能并且把so文件放在了外置存储区域，则需要申请该权限，否则不需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 写外置存储。如果开发者使用了离线地图，并且数据写在外置存储区域，则需要申请该权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <application
+        android:name=".ExTraceApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/login_picture"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".VerifyActivity"></activity>
+        <activity android:name=".InputActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".RealTimeLocationActivity" />
+        <activity android:name=".RegiMesActivity" />
+        <activity android:name=".RegiActivity" />
+        <activity android:name=".LoginTeleActivity" />
+        <activity android:name=".ModPwdActivity" />
+        <activity android:name=".ModTelActivity" />
+        <activity android:name=".ModNameActivity" />
+        <activity android:name="extrace.ui.domain.AddressActivity" />
+        <activity android:name=".RecvMesActivity" />
+        <activity android:name=".SendMesActivity" />
+        <activity android:name=".CalcuFeeActivity" />
+        <activity android:name="extrace.ui.domain.SearchBoxActivity" />
+        <activity android:name="extrace.ui.misc.Qrcode" />
+        <activity android:name="extrace.ui.misc.MapActivity" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="2f87a1f301ac0" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="93c045aa41f368ed1a91fd6abe5fd153" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="FZVlR0LPXSlZuGS8xTuKGbGPf244TfVl" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity android:name=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="extrace.ui.misc.RegionListActivity"
+            android:label="@string/title_activity_region_list">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- category android:name="android.intent.category.LAUNCHER" / -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="zxing.util.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SendActivity" />
+        <activity android:name=".UserInfoEditActivity" />
+    </application>
+
+</manifest>

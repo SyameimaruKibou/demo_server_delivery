@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewfinder_laser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="卓越快递"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/service">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/black_btn"
+                android:gravity="center" >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/service" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客服"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/calculate"
+            android:paddingLeft="2dp">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/black_btn"
+                android:gravity="center" >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/caculate" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运费查询"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_bg_up"
+        android:gravity="center"
+        android:padding="20sp">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:background="@drawable/corners_btn"
+            android:paddingTop="5dp"
+            android:drawableTop="@drawable/send"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:text="寄快递"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+
+</LinearLayout>
+
+</LinearLayout>

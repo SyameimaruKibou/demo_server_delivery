@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">        
+        html, body {
+            width: 100%;height: 100%;margin:0;font-family:"微软雅黑";
+        }
+        /*滚动条样式*/
+		::-webkit-scrollbar {
+		  /*滚动条整体样式*/
+		  width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+		  height: 10px;
+		 }
+		::-webkit-scrollbar-thumb {
+		  /*滚动条里面小方块*/
+		  border-radius: 10px;
+		  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+		  background   : #B1009B;
+		}
+		::-webkit-scrollbar-track {
+		  /*滚动条里面轨道*/
+		  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+		  border-radius: 10px;
+		  background   : #ededed;
+		}
+		#allmap {width: 100%;height: 100%;}
+		#historyTable {width:100%}
+		#nav { width:40%; height: 200px;background:rgba(228, 228, 228, 0.8);
+		overflow-y:scroll; 
+		position:fixed;left:30%;top:0;z-index:999; 
+		}
+		#btn { width:150px; height: 150px;background:rgba(0, 228, 228, 0.8);
+		position:fixed;left:0;top:0;z-index:999; 
+		}
+	</style>
+	<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=OMg4qQMizmlI9wSmBIxr4Hh9uPRIrMnF"></script>
+	<title>物流信息追踪</title>
+</head>
+<body>
+<button id="btn" onclick="goRealTimeLoc()">
+	<font size="6px">实时位置</font>
+</button>
+<div id="nav">
+	<table id="historyTable">
+	    <tr>
+	         <th>时间</th>
+	         <th>状态</th>
+	    </tr>
+	</table>
+</div>
+<div id="allmap"></div>
+</body>
+</html>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/showAction.js"></script>

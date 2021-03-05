@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitesmoke"
+    tools:context=".choose_transnode_activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:id="@+id/arrow_left"
+            android:layout_width="40dp"
+            android:layout_height="37dp"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="节点选择"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/transnode_save"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="保存"
+            android:background="@drawable/white_btn"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/white_btn"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded,UnusedAttribute">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="50dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/transnode_hello"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="XX的登录身份："
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="8dp"
+            android:layout_height="50dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/express_edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="请选择工作地点："
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLine" />
+
+
+        <RelativeLayout
+            android:id="@+id/transnode_sorter"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/rg_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="省级分拣区工作人员"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市级分拣区工作人员"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="区级分拣区工作人员"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:id="@+id/transnode_tx_region"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:hint="工作节点（请选择）"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/transnode_bn_region"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/location" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:id="@+id/transnode_network"
+            android:layout_width="match_parent"
+            android:paddingLeft="8dp"
+            android:layout_height="50dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/transnode_tv"
+                android:layout_width="168dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="请选择具体节点为："
+                android:textSize="17sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorLine" />
+
+        <ListView
+            android:id="@+id/iiiii"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:listSelector="@drawable/listviewselector" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

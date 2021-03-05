@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="10dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/textView6"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="运单号：" />
+
+		<TextView
+			android:id="@+id/tv_box_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="14dp"
+			android:text="" />
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/socity"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:singleLine="true"
+			android:textSize="20sp" />
+
+
+		<ImageView
+			android:id="@+id/imageView2"
+			android:layout_width="100dp"
+			android:layout_height="50dp"
+			android:layout_centerHorizontal="true"
+			android:src="@drawable/expresslistarrow" />
+
+		<TextView
+			android:id="@+id/tarcity"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:layout_marginTop="8dp"
+			android:layout_alignParentRight="true"
+
+			android:textSize="20sp" />
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal">
+		<TextView
+			android:id="@+id/tv_state"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="14dp"
+			android:text="TextView"/>
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/sendname"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="20dp"
+				android:layout_marginEnd="16dp"
+				android:text="TextView"/>
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right">
+			<TextView
+				android:id="@+id/rcvname"
+				android:paddingRight="20dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="TextView"/>
+		</RelativeLayout>
+
+	</LinearLayout>
+</LinearLayout>

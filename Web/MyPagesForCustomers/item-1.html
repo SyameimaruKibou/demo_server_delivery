@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>在线快递查询系统</title>
+</head>
+<body>
+	<div class="cd-fold-content single-page">
+		<h2>查快递</h2>
+        <div style="width:80%;height:100px;margin:30px">
+	        <form id="form1" onsubmit="postQueryMsg()">
+	            <input required='' type='text' id="phoneNumber">
+	            <label alt='请输入手机号码' placeholder='手机号码'></label>
+	            <input id="queryBtn" type="submit" value="Submit" >
+	        </form>
+		    <div id="queryResultTable" style="overflow:hidden;display:none;margin:50px auto">
+		        <table id="queryTable" width="80%" class="gridtable">
+				    <tr>
+				         <th nowrap>运单号</th>
+				         <th width="100px" nowrap>商品名</th>
+				         <th width="50px" nowrap>寄件人</th>
+				         <th width="50px" nowrap>查询</th>
+				    </tr>
+				</table>
+		    </div>
+    	</div>   
+	</div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

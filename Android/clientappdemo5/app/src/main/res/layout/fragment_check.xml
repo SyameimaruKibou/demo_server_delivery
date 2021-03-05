@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@color/viewfinder_laser"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="查快递"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/viewfinder_laser"
+            android:elevation="3dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                style="@style/Bar.White"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:layout_width="245dp"
+                    android:layout_height="30dp"
+                    android:hint="请输入查询的运单号"
+                    android:textColor="@color/dimgray"
+                    android:background="@drawable/input_rectangle"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="8dp"
+                    android:singleLine="true"
+                    android:id="@+id/search_number"
+                    android:textSize="15dp"/>
+
+                <ImageView
+                    android:id="@+id/userinfo_tv_back"
+                    style="@style/Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/search_number"
+                    android:clickable="true"
+                    android:src="@drawable/pscan" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="40sp"
+                android:layout_height="25sp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:text="查询"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/viewfinder_laser"
+            android:gravity="bottom"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:id="@+id/rg_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tv_myrcv"
+                    style="@style/RadioButtonBottomTab"
+                    android:checked="true"
+                    android:text="我收的" />
+
+                <RadioButton
+                    android:id="@+id/tv_myget"
+                    style="@style/RadioButtonBottomTab"
+                    android:text="我寄的" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_sub"
+        android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viewfinder_laser"
+    android:orientation="vertical"
+    tools:context=".Network_tmp_Activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/viewfinder_laser"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="卓越快递"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择节点"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/tracsnode_choose_tv"
+            android:textSize="16sp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/viewfinder_laser"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user"
+                android:id="@+id/img_my_networker"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:text="   我的资料"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_bg_up"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/networker_sheet_rev_btn"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="30sp"
+                android:background="@drawable/corners_btn"
+                android:drawableTop="@drawable/preceive"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="揽收快递"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:id="@+id/networker_sheet_packup_btn"
+                android:layout_toRightOf="@+id/networker_sheet_rev_btn"
+                android:background="@drawable/corners_btn"
+                android:drawableTop="@drawable/ptransport"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="打包"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="30sp"
+                android:id="@+id/networker_sheet_depack_btn"
+                android:background="@drawable/corners_btn"
+                android:drawableTop="@drawable/scan_btn"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="拆包扫一扫"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/networkder_node_find"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/corners_btn"
+                android:drawableTop="@drawable/signed"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="查看网点信息"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

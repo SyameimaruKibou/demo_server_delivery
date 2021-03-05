@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/viewfinder_laser"
+            android:id="@+id/ser"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id"
+            android:layout_toRightOf="@id/ser"
+            android:layout_marginLeft="10dp"
+            android:textSize="19sp"
+            android:text="  ID:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/tv_id"
+            android:layout_toRightOf="@+id/id"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/people_message"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/message">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="寄件人电话： " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/sender"
+                android:id="@+id/tv_sender"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reciver"
+                android:text="收件人："/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reciver"
+                android:id="@+id/tv_reciver"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/send_place_message"
+        android:layout_below="@+id/people_message">
+
+        <ImageView
+            android:id="@+id/qishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/fenlei"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qishi"
+            android:text="  运输： "
+            android:id="@+id/source"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_source"
+            android:text="起始地"
+            android:layout_toRightOf="@id/source"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/expresslistarrow1"
+            android:layout_width="59dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/tv_source"
+            app:srcCompat="@drawable/expresslistarrow"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_target"
+            android:text="下一站"
+            android:layout_toRightOf="@id/expresslistarrow1"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rcv_place_message"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/send_place_message">
+
+        <ImageView
+            android:id="@+id/leixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/fenlei"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/leixing"
+            android:text=" 快递类型： "
+            android:id="@+id/target"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/target"
+            android:text=" 文件 "
+            android:id="@+id/fenlei"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

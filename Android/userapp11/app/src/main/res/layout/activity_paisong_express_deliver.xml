@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="extrace.ui.domain.ExpressPaiSongActivity">
+
+
+    <!--上部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:background="@drawable/bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="10dp"
+            android:id="@+id/arrow_left"
+            android:layout_width="40dp"
+            android:layout_height="37dp"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/package_trans_tv_packagetrans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待派送快件"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:text=""
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <!--顶部区域结束-->
+
+
+    <RelativeLayout
+        style="@style/Bar.White"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            style="@style/Icon"
+            android:id="@+id/package_info_package_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/preceive"/>
+
+        <TextView
+            android:id="@+id/package_info_sourcetext"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/package_info_package_icon"
+            android:text="快件号"/>
+
+        <EditText
+            android:id="@+id/express_delive_deliver_et_pid"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorFont"
+            android:textSize="15sp"
+            android:background="@null"
+            android:layout_toRightOf="@+id/package_info_sourcetext"/>
+
+
+        <ImageView
+            android:id="@+id/express_delive_iv_scan"
+            style="@style/Icon"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/express_delive_deliver_et_pid"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/pscan"/>
+
+        <ImageView
+            android:id="@+id/express_delive_ig_search"
+            style="@style/Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/express_delive_iv_scan"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLine" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/message_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:layout_editor_absoluteY="39dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/coral"
+                    android:text="快件详情:" />
+
+                <TextView
+                    android:id="@+id/sousuo_x_tiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（共搜索到x条相关快递信息）" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+                <ListView
+                    android:id="@+id/charesult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLine" />
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/express_rec_bt_ok"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/btn_orange_selector"
+
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="确认接收"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/coral"
+                    android:text="已接收："/>
+
+                <TextView
+                    android:id="@+id/jieshou_x_jian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（共接收x件待派送快递）" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/package_list"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/empty_tv"
+                android:text="暂时还没有接收的包裹噢~"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
